@@ -4,13 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "login_module_test": "nightwatch --group login_tests",
+    "startup_test": "nightwatch --group startup_tests",
     "smoke_test": "nightwatch --tag smoke"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nightwatch",
+    "automation"
+  ],
+  "author": "Md. Hasnat Jamil",
   "license": "ISC",
-  "description": "",
+  "description": "Custom automation framework based on the Nightwatch js automation framework.",
   "dependencies": {
     "chromedriver": "^87.0.5",
     "geckodriver": "^1.21.1",
