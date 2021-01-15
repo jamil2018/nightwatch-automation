@@ -1,0 +1,22 @@
+{
+  "name": "nightwatch_framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch",
+    "login_module_test": "nightwatch --group login_tests",
+    "smoke_test": "nightwatch --tag smoke"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^87.0.5",
+    "geckodriver": "^1.21.1",
+    "nightwatch": "^1.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.3"
+  }
+}
