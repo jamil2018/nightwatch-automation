@@ -5,7 +5,10 @@
   "scripts": {
     "test": "nightwatch",
     "startup_test": "nightwatch --group startup_tests",
-    "smoke_test": "nightwatch --tag smoke"
+    "smoke_test": "nightwatch --tag smoke",
+    "generate_report": "allure generate ./allure-results --clean",
+    "open_report": "allure open",
+    "start_startup_test": "npm run startup_test && npm run generate_report && npm run open_report"
   },
   "keywords": [
     "nightwatch",
@@ -15,9 +18,11 @@
   "license": "ISC",
   "description": "Custom automation framework based on the Nightwatch js automation framework.",
   "dependencies": {
+    "allure-commandline": "^2.13.8",
     "chromedriver": "^87.0.5",
     "geckodriver": "^1.21.1",
-    "nightwatch": "^1.5.1"
+    "nightwatch": "^1.5.1",
+    "nightwatch-allure": "^1.2.0"
   },
   "devDependencies": {
     "mocha": "^6.2.3"

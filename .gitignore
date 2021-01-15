@@ -1,3 +1,7 @@
 node_modules
 .env
 tests_output
+allure-report
+allure-results
+chromedriver.log
+debug.log

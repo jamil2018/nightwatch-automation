@@ -1,3 +1,5 @@
+const allureReporter = require("nightwatch-allure");
+
 module.exports = {
   // An object which will be made available on the main test api, throughout the test execution
   globals: {
@@ -49,5 +51,12 @@ module.exports = {
     reporter: function (results, cb) {
       cb(results);
     },
+  },
+};
+
+module.exports = {
+  reporter: (results, done) => {
+    const reporter = new allureReporter.NightwatchAllureReporter({});
+    reporter.write(results, done);
   },
 };
