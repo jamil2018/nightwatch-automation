@@ -1,3 +1,5 @@
+const testData = require("../../data/startup_test_data");
+
 module.exports = {
   // use tags to group tests into a specific test category. eg: smoke, sanity etc
   "@tags": ["smoke"],
@@ -10,11 +12,11 @@ module.exports = {
     this.pages.testPage
       .navigate()
       .waitForElementVisible("@body")
-      .assert.titleContains("Ecosia")
-      .inputSearchQuery("Nightwatch js")
+      .assert.titleContains(testData.pageTitle)
+      .inputSearchQuery(testData.searchQuery)
       .assert.visible("@submitBtn")
       .submit("@submitBtn")
-      .assert.containsText("@result", "Nightwatch.js")
+      .assert.containsText("@result", testData.searchQuery)
       .end();
   },
 };
