@@ -1,4 +1,4 @@
-const { commonElements, commonCommands } = require("./common/common_page");
+const { commmonElements, commonCommands } = require("./common/common_page");
 const logger = require("../utils/logger");
 
 const loginPageElements = {
